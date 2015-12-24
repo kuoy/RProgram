@@ -5,8 +5,8 @@ It includes two tasks:
 (2) Cache the value of the existing inverse matrix so the user does not need to compute the inverse matrix if it exists.  
 
 ### makeCacheMatrix Function
-#### The makeCacheMatrix function contains the information of a matrix and its existing 
-inverse matrix in a global environment.  The makeCacheMatrix function contains of four children functions in a list format, explained below: 
+#### The makeCacheMatrix function contains the information of a matrix and its existing inverse matrix in a global environment.  
+The makeCacheMatrix function contains of four children functions in a list format, explained below: 
 
  (1) the set function stores the data of either its original matrix or a new assigned matrix. Its inverse matrix is set as NULL because no inverse matrix attained yet.
 (2) the get function displays the stored matrix data
@@ -28,8 +28,7 @@ makeCacheMatrix<- function(x = matrix()) {
 }
 
 ### cacheSolve Function
-#### The cacheSolve function responds to the request of an inverse matrix.  There are two 
-steps in this function:
+#### The cacheSolve function responds to the request of an inverse matrix.  There are two steps in this function:
 (1) verify the value of m that was stored in the given variable and saved in the getinvmatrix function.  If the value of m saved in the memory is not NULL, which indicates that the matrix has an existing inverse matrix saved; then this cacheSolve function returns a message “getting cached data” and does nothing. 
 (2) if the value of m is NULL, it means that this is the first time of the request for getting the inverse matrix. Then, the matrix data is extracted from the $get() and its inverse matrix is returned and stored at $setinvmatrix(). 
 
