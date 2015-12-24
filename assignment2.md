@@ -12,7 +12,7 @@ The makeCacheMatrix function contains of four children functions in a list forma
 (2) the get function displays the stored matrix data
 (3) the setinvmatrix function stores the data of the inverse matrix m from the cacheSolve function  
 (4) the getinvmatrix function displays the data of the stored inverse matrix m
-
+```
 makeCacheMatrix<- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -26,12 +26,12 @@ makeCacheMatrix<- function(x = matrix()) {
        setinvmatrix= setinvmatrix, 
        getinvmatrix = getinvmatrix)
 }
-
+```
 ### cacheSolve Function
 ##### The cacheSolve function responds to the request of an inverse matrix.  There are two steps in this function:
 (1) verify the value of m that was stored in the given variable and saved in the getinvmatrix function.  If the value of m saved in the memory is not NULL, which indicates that the matrix has an existing inverse matrix saved; then this cacheSolve function returns a message “getting cached data” and does nothing. 
 (2) if the value of m is NULL, it means that this is the first time of the request for getting the inverse matrix. Then, the matrix data is extracted from the $get() and its inverse matrix is returned and stored at $setinvmatrix(). 
-
+```
 cacheSolve <- function(x, ...) {
   m <- x$getinvmatrix()
   if(!is.null(m)) {
@@ -44,9 +44,10 @@ cacheSolve <- function(x, ...) {
     x$setinvmatrix(m)
     m  ## Return the inverse matrix of the giving matrix x
   }
-  
+ ``` 
 ### Example
-##### Assign makeCacheMatrix to an object so the object has 4 elements on the list
+##### This example shows how a matrix x and its inverse matrix store.  
+Assign makeCacheMatrix to an object b so it has 4 elements on the list. The matrix x is shown b$get() and its inverse matrix is shown on $getinvmatrix() after the cacheSolve function is called. 
 ```
 > source("makeCacheMatrix.R")
 > b<-makeCacheMatrix (x = matrix(c(1, 2, 3, 4), nrow=2, ncol=2))
