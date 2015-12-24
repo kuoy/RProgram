@@ -47,9 +47,10 @@ cacheSolve <- function(x, ...) {
   
 ### Example
 ##### Assign makeCacheMatrix to an object so the object has 4 elements on the list
-#######> source("makeCacheMatrix.R")
-#######> b<-makeCacheMatrix (x = matrix(c(1, 2, 3, 4), nrow=2, ncol=2))
-#######> b$get()
+```
+> source("makeCacheMatrix.R")
+> b<-makeCacheMatrix (x = matrix(c(1, 2, 3, 4), nrow=2, ncol=2))
+> b$get()
      [,1] [,2]
 [1,]    1    3
 [2,]    2    4
@@ -64,3 +65,4 @@ NULL
      [,1] [,2]
 [1,]   -2  1.5
 [2,]    1 -0.5
+```
