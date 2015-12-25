@@ -1,4 +1,4 @@
-### Introduction
+## Introduction
 Assignment 2 is about buiding an R function in a global environment, which is able to cache an existing inverse matrix of a matrix.  
 It includes two tasks: 
 (1) Compute an R object of a matrix for its existing inverse matrix. 
